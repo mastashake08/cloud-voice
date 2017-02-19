@@ -37,7 +37,7 @@ class ApiFileController extends Controller
         //
         if ($request->file('recording')->isValid()) {
               //
-              $path = $request->recording->store('recordings');
+              $path = $request->recording->storeAs('public',uniqid().'.3gp');
           }
         $file = File::Create([
           'user_id' => $request->user_id,
