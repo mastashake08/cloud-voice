@@ -47,6 +47,12 @@ return [
             'driver' => 'local',
             'root' => storage_path('app'),
         ],
+        'recordings' => [
+          'driver' => 'local',
+          'root' => storage_path('app/public/recordings'),
+          'url' => env('APP_URL').'/storage/recordings',
+          'visibility' => 'public',
+        ],
 
         'public' => [
             'driver' => 'local',
